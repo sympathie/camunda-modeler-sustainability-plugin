@@ -1,5 +1,5 @@
 {
-  "name": "camunda-modeler-plugin-example",
+  "name": "Sustainable Development Goals",
   "version": "3.1.0",
   "description": "An example plugin for the Camunda Modeler",
   "main": "index.js",
@@ -18,16 +18,34 @@
     "modeler",
     "plugin"
   ],
-  "author": "Philipp Fromme",
+  "author": "Sebastian Gülpen",
   "license": "MIT",
   "devDependencies": {
-    "camunda-modeler-plugin-helpers": "^5.0.0",
+    "@babel/core": "^7.17.9",
+    "@bpmn-io/properties-panel": "^3.11.0",
+    "bpmn-js-properties-panel": "^5.5.0",
+    "camunda-modeler-plugin-helpers": "^5.1.0",
+    "camunda-modeler-webpack-plugin": "^0.1.0",
+    "file-loader": "^6.2.0",
     "npm-run-all": "^4.1.5",
+    "url-loader": "^4.1.1",
     "webpack": "^5.75.0",
     "webpack-cli": "^5.0.1"
   },
-  "files": [
-    "dist",
-    "index.js"
-  ]
+  "dependencies": {
+    "axios": "^1.6.0",
+    "bpmn-js": "^14.0.0",
+    "console-browserify": "^1.2.0",
+    "diagram-js": "^12.4.0",
+    "domify": "^2.0.0",
+    "ids": "^1.0.5",
+    "img-loader": "^4.0.0",
+    "inherits": "^2.0.4",
+    "jquery": "^3.7.1",
+    "lodash": "^4.17.21",
+    "min-dash": "^4.1.1",
+    "min-dom": "^4.1.0",
+    "tiny-svg": "^3.0.1",
+    "uuid": "^9.0.1"
+  }
 }

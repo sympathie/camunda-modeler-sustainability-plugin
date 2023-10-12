@@ -1,0 +1,140 @@
+{
+    "name": "sustainability",
+    "uri": "http://example.com/bpmn/sustainability",
+    "prefix": "sustainability",
+    "xml": {
+      "tagAlias": "lowerCase"
+    },
+    "types": [
+      {
+        "name": "SustainableDevelopmentGoal",
+        "superClass": ["Element"],
+        "properties": [
+          {
+            "name": "title",
+            "isAttr": true,
+            "type": "String"
+          },
+          {
+            "name": "code",
+            "isAttr": true,
+            "type": "Number"
+          },
+          {
+            "name": "description",
+            "isAttr": true,
+            "type": "String"
+          },
+          {
+            "name": "sustainableDevelopmentTargets",
+            "isMany": true,
+            "type": "SustainableDevelopmentTarget"
+          }
+        ]
+      },
+      {
+        "name": "SustainableDevelopmentTarget",
+        "properties": [
+          {
+            "name": "code",
+            "isAttr": true,
+            "type": "Number"
+          },
+          {
+            "name": "description",
+            "isAttr": true,
+            "type": "String"
+          },
+          {
+            "name": "indicators",
+            "isMany": true,
+            "type": "SustainableDevelopmentIndicator"
+          }
+        ]
+      },
+      {
+        "name": "SustainabilityIndicator",
+        "superClass": ["Element"],
+        "properties": [
+          {
+            "name": "id",
+            "isAttr": true,
+            "type": "String"
+          },
+          {
+            "name": "name",
+            "isAttr": true,
+            "type": "String"
+          },
+          {
+            "name": "unit",
+            "isAttr": true,
+            "type": "String"
+          },
+          {
+            "name": "period",
+            "isAttr": true,
+            "type": "String"
+          },
+          {
+            "name": "quantificationMethod",
+            "isAttr": true,
+            "type": "String"
+          },
+          {
+            "name": "improvementGoal",
+            "isAttr": true,
+            "type": "Number"
+          },
+          {
+            "name": "goalType",
+            "isAttr": true,
+            "type": "String"
+          },
+          {
+            "name": "impacts",
+            "isMany": true,
+            "type": "SustainableDevelopmentImpact"
+          }
+        ]
+      },
+      {
+        "name": "SustainableDevelopmentImpact",
+        "properties": [
+          {
+            "name": "impact",
+            "isAttr": true,
+            "type": "SustainableDevelopmentImpactType"
+          },
+          {
+            "name": "sustainableDevelopmentIndicatorRef",
+            "isRef": true,
+            "type": "String"
+          }
+        ]
+      },
+      {
+        "name": "Metric",
+        "superClass": ["Element"],
+        "properties": [
+          {
+            "name": "id",
+            "itAttr": true,
+            "type": "String"
+          },
+          {
+            "name": "indicatorRef",
+            "isRef": true,
+            "type": "String"
+          },
+          {
+            "name": "value",
+            "isAttr": true,
+            "type": "Number"
+          }
+        ]
+      }
+    ],
+    "emumerations": [],
+    "associations": []
+  }
