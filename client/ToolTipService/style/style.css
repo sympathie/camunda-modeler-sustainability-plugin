@@ -1,0 +1,192 @@
+.tooltip {
+    position: relative;
+    display: none;
+    z-index: 10000;
+    opacity: 0.9;
+}
+
+.tooltip .tooltip-content {
+    position: absolute;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    min-width: 150px;
+    max-width: 410px;
+    width: max-content;
+    width: -moz-max-content;
+    background-color: white;
+    color: black;
+    border: 1px solid rgba(169,169,169, .8);
+}
+
+.tooltip .tooltip-header {
+    text-align: left;
+    font-weight: bold;
+}
+
+.tooltip .tooltip-subheader {
+    font-weight: bold;
+    font-style: italic;
+    margin-bottom: 0.3em;
+}
+
+.tooltip .tooltip-container {
+    border-bottom: 1px grey solid;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.tooltip .tooltip-line {
+    padding-left: 0.75em;
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+}
+
+.tooltip-line .tooltip-key {
+    color: black;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.tooltip-line .tooltip-value {
+    display: inline-block;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+
+.tooltip-line .tooltip-value-text {
+    font-family: inherit;
+}
+
+.tooltip-line .tooltip-value-code {
+    font-family: monospace, monospace;
+    font-size: 1em;
+}
+
+.tooltip .tooltip-no-properties {
+    text-align: center;
+}
+
+.sdg-toggle-mode {
+    cursor: pointer;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(97, 206, 96);
+    border-radius: 2px;
+    padding: 6px;
+    font-size: 16px;
+    color: black;
+    user-select: none;
+}
+
+.hidden {
+    display: none!important;
+}
+
+.goals-overview-container {
+    display: flex;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    justify-content: center;
+
+    height: 100px;
+}
+
+.sdg-icon {
+    cursor: pointer;
+}
+
+
+.indicator-overview-container {
+    overflow: scroll;
+    padding: 10px;
+    position: absolute;
+    box-shadow: 0px 0px 33px 9px rgba(0,0,0,0.1);
+    top: 0;
+    left: 0;
+
+    background-color: var(--palette-background-color);
+
+
+    width: 350px;
+    height: 100vh;
+}
+
+
+
+.indicator-overview-header {
+    border-bottom: 1px solid grey;
+    display: flex;
+    align-items: center;
+}
+
+.indicator-overview-header-image, .sdg-icon {
+    width: 70px;
+    height: 70px;
+    padding: 5px;
+}
+
+.sbpmn-button {
+    display: inline-block;
+    margin: 5px;
+    width: 100%;
+    min-width: 100px;
+    padding: 4px;
+    border-radius: 5px;
+    border: 2.5px solid #E0E1E4;
+    box-shadow: 0px 0px 20px -20px;
+    cursor: pointer;
+    background-color: white;
+    transition: all 0.2s ease-in-out 0ms;
+    user-select: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+.sbpmn-button:hover {
+    background-color: #F2F2F2;
+    box-shadow: 0px 0px 20px -18px;
+}
+
+.sbpmn-button:active {
+    transform: scale(0.95);
+}
+
+.selected {
+    background-color: forestgreen;
+}
+
+.indicator {
+}
+
+.target-container {
+}
+
+#heatmapLegend {
+    display: flex;
+    padding: 10px;
+    position: absolute;
+    top: 0;
+    right: 50px;
+    width: 200px;
+
+    justify-content: center;
+
+    height: 100px;
+}
+
+.legend-color {
+    width: 1px;
+    height: 20px;
+}
+
+.legend-label {
+    font-size: 14px;
+}

@@ -1,16 +1,24 @@
-/** 
- * NOTE: This is specifically a registration of a **bpmn-js** extension. If you would like to create another type of plugin 
- * (say a client extension), the structure of the plugin and the function to register it will be slightly different.
- * 
- * Please refer to:
- * Examples plugins - https://github.com/camunda/camunda-modeler-plugins
- * Plugin documentation - https://docs.camunda.io/docs/components/modeler/desktop-modeler/plugins/
- */
-
 import {
-  registerBpmnJSPlugin
+  registerBpmnJSModdleExtension,
+  registerBpmnJSPlugin, registerPlatformBpmnJSPlugin
 } from 'camunda-modeler-plugin-helpers';
 
+import sustainabilityExtension from "../resources/KeySustainabilityIndicator.json"
 import BpmnExtensionModule from './bpmn-js-extension';
+import SDGExtension from "./SDGPropertiesPanel";
+import SDGRenderer from "./SDGRenderer";
+import ToolTipService from './ToolTipService';
+import HeatMapService from "./HeatMapService";
+import ToggleMode from "./HeatMapService/features/ToggleMode";
+import GoalsOverview from "./HeatMapService/features/GoalsOverview";
+import IndicatorOverview from "./HeatMapService/features/indicatorOverview";
 
 registerBpmnJSPlugin(BpmnExtensionModule);
+registerPlatformBpmnJSPlugin(SDGExtension)
+registerPlatformBpmnJSPlugin(SDGRenderer)
+registerBpmnJSModdleExtension(sustainabilityExtension)
+registerPlatformBpmnJSPlugin(ToolTipService);
+registerPlatformBpmnJSPlugin(HeatMapService)
+registerPlatformBpmnJSPlugin(ToggleMode)
+registerPlatformBpmnJSPlugin(GoalsOverview)
+registerPlatformBpmnJSPlugin(IndicatorOverview)
